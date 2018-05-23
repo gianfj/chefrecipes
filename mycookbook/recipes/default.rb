@@ -1,4 +1,4 @@
-hostname = node["opsworks"]["instance"]["hostname"]
+hostname=node[:opsworks][:instance][:hostname]
 file '/etc/hostname' do
     content "#{hostname}\n"
     mode '0644'
