@@ -1,6 +1,6 @@
 instance = search("aws_opsworks_instance").first
 hostname="#{instance['hostname']}"
-#id="#{instance['instance_id']}"
+id="#{instance['instance_id']}"
 
 
 
@@ -37,5 +37,5 @@ def get_opsworks_hostname(instance_id)
   return instance_resp.instances[0].hostname
 end
 
-Chef::Log.info("********** Instance Hostname: '#{get_opsworks_hostname('#{instance['instance_id']}')}' **********")
+Chef::Log.info("********** Instance Hostname: '#{get_opsworks_hostname('id')}' **********")
 
