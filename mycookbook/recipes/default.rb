@@ -1,4 +1,7 @@
-hostname=node[:opsworks][:instance][:hostname]
+#hostname=node[:opsworks][:instance][:hostname]\
+instance = search("aws_opsworks_instance").first
+Chef::Log.info("********** The instance's hostname is '#{instance['hostname']}' **********")
+chef::Log.info("********** The instance's ID is '#{instance['instance_id']}' **********")
 file '/etc/hostname' do
     content "#{hostname}\n"
     mode '0644'
