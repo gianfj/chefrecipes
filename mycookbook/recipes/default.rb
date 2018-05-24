@@ -38,4 +38,5 @@ def get_opsworks_hostname(instance_id)
 end
 
 Chef::Log.info("********** Instance Hostname: '#{get_opsworks_hostname(id)}' **********")
+Chef::Log.info("********** Instance id: '#{id}' **********")
 
